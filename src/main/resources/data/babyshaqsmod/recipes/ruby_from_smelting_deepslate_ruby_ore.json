@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "group": "ruby",
+  "ingredient": {
+    "item": "babyshaqsmod:deepslate_ruby_ore"
+  },
+  "result": "babyshaqsmod:ruby"
+}
