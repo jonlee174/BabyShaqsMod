@@ -2,10 +2,17 @@
   "item.babyshaqsmod.ruby": "Ruby",
   "item.babyshaqsmod.coconut": "Coconut",
   "item.babyshaqsmod.coconut_seed": "Coconut Seed",
+  "item.babyshaqsmod.tomato": "Tomato",
+  "item.babyshaqsmod.tomato_seeds": "Tomato Seeds",
 
   "block.babyshaqsmod.block_of_ruby": "Block of Ruby",
   "block.babyshaqsmod.ruby_ore": "Ruby Ore",
   "block.babyshaqsmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.babyshaqsmod.tomato_crop": "Tomato Crop",
+  "block.babyshaqsmod.archaeology_stand": "Archaeology Stand",
 
-  "itemGroup.babyshaqs_tab": "babyShaq's Items"
+  "creativemodetab.babyshaqs_items_tab": "babyShaq's Items",
+  "creativemodetab.babyshaqs_blocks_tab": "babyShaq's Blocks",
+
+  "entity.minecraft.villager.babyshaqsmod.archaeologist": "Archaeologist"
 }

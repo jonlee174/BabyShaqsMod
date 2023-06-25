@@ -1,6 +1,7 @@
 package com.babyshaq.babyshaqsmod.block;
 
 import com.babyshaq.babyshaqsmod.BabyShaqsMod;
+import com.babyshaq.babyshaqsmod.block.custom.TomatoCropBlock;
 import com.babyshaq.babyshaqsmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,6 +26,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_EMERALD_ORE)));
+
+    public static final RegistryObject<Block> TOMATO_CROP = registerBlock("tomato_crop",
+            () -> new TomatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> ARCHAEOLOGY_STAND = registerBlock("archaeology_stand",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -3,7 +3,10 @@ package com.babyshaq.babyshaqsmod;
 import com.babyshaq.babyshaqsmod.block.ModBlocks;
 import com.babyshaq.babyshaqsmod.item.ModCreativeModeTabs;
 import com.babyshaq.babyshaqsmod.item.ModItems;
+import com.babyshaq.babyshaqsmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,6 +37,8 @@ public class BabyShaqsMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -46,17 +51,25 @@ public class BabyShaqsMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == ModCreativeModeTabs.BABYSHAQS_TAB.get()) {
+        if (event.getTab() == ModCreativeModeTabs.BABYSHAQS_ITEMS_TAB.get()) {
             event.accept(ModItems.RUBY);
+            event.accept(ModItems.COCONUT);
+            event.accept(ModItems.COCONUT_SEED);
+            event.accept(ModItems.TOMATO);
+            event.accept(ModItems.TOMATO_SEEDS);
+        }
+
+        if (event.getTab() == ModCreativeModeTabs.BABYSHAQS_BLOCKS_TAB.get()) {
             event.accept(ModBlocks.RUBY_ORE);
             event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
             event.accept(ModBlocks.BLOCK_OF_RUBY);
-            event.accept(ModItems.COCONUT);
-            event.accept(ModItems.COCONUT_SEED);
+            event.accept(ModBlocks.ARCHAEOLOGY_STAND);
         }
     }
 
@@ -71,7 +84,7 @@ public class BabyShaqsMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOMATO_CROP.get(), RenderType.cutout());
         }
     }
 }
