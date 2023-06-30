@@ -22,6 +22,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 (block) -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
         add(ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.DEEPSLATE_RUBY_ORE.get(), ModItems.RUBY.get()));
+
+        dropSelf(ModBlocks.COCONUT_LOG.get());
+        dropSelf(ModBlocks.COCONUT_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_COCONUT_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_COCONUT_WOOD.get());
+        dropSelf(ModBlocks.COCONUT_PLANKS.get());
+        dropSelf(ModBlocks.COCONUT_SAPLING.get());
+
+        this.add(ModBlocks.COCONUT_LEAVES.get(), (block) ->
+                createLeavesDrops(block, ModBlocks.COCONUT_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

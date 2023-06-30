@@ -1,6 +1,7 @@
 package com.babyshaq.babyshaqsmod.datagen;
 
 import com.babyshaq.babyshaqsmod.BabyShaqsMod;
+import com.babyshaq.babyshaqsmod.block.ModBlocks;
 import com.babyshaq.babyshaqsmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -19,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.RUBY);
+        saplingItem(ModBlocks.COCONUT_SAPLING);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

@@ -19,18 +19,12 @@ public class ModItems {
     public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> COCONUT_SEED = ITEMS.register("coconut_seed",
-            () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(),
                     new Item.Properties()));
 
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(2f).build())));
-
-    public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

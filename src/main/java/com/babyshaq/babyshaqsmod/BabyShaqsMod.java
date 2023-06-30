@@ -1,6 +1,8 @@
 package com.babyshaq.babyshaqsmod;
 
 import com.babyshaq.babyshaqsmod.block.ModBlocks;
+import com.babyshaq.babyshaqsmod.datagen.DataGenerators;
+import com.babyshaq.babyshaqsmod.datagen.ModWorldGenProvider;
 import com.babyshaq.babyshaqsmod.item.ModCreativeModeTabs;
 import com.babyshaq.babyshaqsmod.item.ModItems;
 import com.babyshaq.babyshaqsmod.villager.ModVillagers;
@@ -9,6 +11,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,6 +19,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.targets.CommonLaunchHandler;
+import net.minecraftforge.fml.loading.targets.FMLDataUserdevLaunchHandler;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -56,11 +61,15 @@ public class BabyShaqsMod
         });
     }
 
+    public void gatherData(GatherDataEvent event)
+    {
+        DataGenerators.gatherData(event);
+    }
+
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == ModCreativeModeTabs.BABYSHAQS_ITEMS_TAB.get()) {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COCONUT);
-            event.accept(ModItems.COCONUT_SEED);
             event.accept(ModItems.TOMATO);
             event.accept(ModItems.TOMATO_SEEDS);
         }
@@ -70,6 +79,13 @@ public class BabyShaqsMod
             event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
             event.accept(ModBlocks.BLOCK_OF_RUBY);
             event.accept(ModBlocks.ARCHAEOLOGY_STAND);
+            event.accept(ModBlocks.COCONUT_LOG);
+            event.accept(ModBlocks.COCONUT_WOOD);
+            event.accept(ModBlocks.STRIPPED_COCONUT_LOG);
+            event.accept(ModBlocks.STRIPPED_COCONUT_WOOD);
+            event.accept(ModBlocks.COCONUT_PLANKS);
+            event.accept(ModBlocks.COCONUT_LEAVES);
+            event.accept(ModBlocks.COCONUT_SAPLING);
         }
     }
 

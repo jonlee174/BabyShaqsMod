@@ -1,8 +1,8 @@
 package com.babyshaq.babyshaqsmod.datagen;
 
 import com.babyshaq.babyshaqsmod.BabyShaqsMod;
-import com.babyshaq.babyshaqsmod.world.feature.ModConfiguredFeatures;
-import com.babyshaq.babyshaqsmod.world.feature.ModPlacedFeatures;
+import com.babyshaq.babyshaqsmod.worldgen.feature.ModConfiguredFeatures;
+import com.babyshaq.babyshaqsmod.worldgen.feature.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

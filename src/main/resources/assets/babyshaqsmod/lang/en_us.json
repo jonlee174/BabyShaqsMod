@@ -1,7 +1,6 @@
 {
   "item.babyshaqsmod.ruby": "Ruby",
   "item.babyshaqsmod.coconut": "Coconut",
-  "item.babyshaqsmod.coconut_seed": "Coconut Seed",
   "item.babyshaqsmod.tomato": "Tomato",
   "item.babyshaqsmod.tomato_seeds": "Tomato Seeds",
 
@@ -10,6 +9,13 @@
   "block.babyshaqsmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.babyshaqsmod.tomato_crop": "Tomato Crop",
   "block.babyshaqsmod.archaeology_stand": "Archaeology Stand",
+  "block.babyshaqsmod.coconut_log": "Coconut Log",
+  "block.babyshaqsmod.stripped_coconut_log": "Stripped Coconut Log",
+  "block.babyshaqsmod.coconut_wood": "Coconut Wood",
+  "block.babyshaqsmod.stripped_coconut_wood": "Stripped Coconut Wood",
+  "block.babyshaqsmod.coconut_planks": "Coconut Planks",
+  "block.babyshaqsmod.coconut_leaves": "Coconut Leaves",
+  "block.babyshaqsmod.coconut_sapling": "Coconut Sapling",
 
   "creativemodetab.babyshaqs_items_tab": "babyShaq's Items",
   "creativemodetab.babyshaqs_blocks_tab": "babyShaq's Blocks",

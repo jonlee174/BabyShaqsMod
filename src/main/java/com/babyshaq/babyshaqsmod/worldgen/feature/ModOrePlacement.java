@@ -1,4 +1,4 @@
-package com.babyshaq.babyshaqsmod.world.feature;
+package com.babyshaq.babyshaqsmod.worldgen.feature;
 
 import net.minecraft.world.level.levelgen.placement.*;
 
